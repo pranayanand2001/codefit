@@ -3,7 +3,7 @@
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
 import AuthLayout from './layouts/AuthLayout.jsx'
-import {Home, Login, Signup, Blog, BlogPost, DashBoard, NotFound} from './pages/export.js'
+import {Home, Login, Signup, Blog, BlogPost, Dashboard, NotFound} from './pages/export.js'
 import CreateBlog from './pages/admin/CreateBlog.jsx'
 import { useAuth } from './contexts/AuthContext.jsx'
 
@@ -32,7 +32,7 @@ const router = createBrowserRouter(
       <Route element={<MainLayout />}>
         <Route path="dashboard" element={
           <ProtectedRoute>
-            <DashBoard />
+            <Dashboard />
           </ProtectedRoute>
         } />
       </Route>  
