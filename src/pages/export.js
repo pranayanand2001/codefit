@@ -4,7 +4,7 @@ import Signup from "./Signup";
 import GoogleLoginBtn from "./GoogleLoginBtn";
 import Blog from "./Blog";
 import BlogPost from "./BlogPost";  
-import DashBoard from "./Dashboard";
+import Dashboard from "./Dashboard";
 import NotFound from "./NotFound";
 
 export { Home, Login, Signup, GoogleLoginBtn, Blog, BlogPost, Dashboard, NotFound };
