@@ -7,4 +7,4 @@ import BlogPost from "./BlogPost";
 import Dashboard from "./Dashboard";
 import NotFound from "./NotFound";
 
-export { Home, Login, Signup, GoogleLoginBtn, Blog, BlogPost, Dashboard , NotFound };
+export { Home, Login, Signup, GoogleLoginBtn, Blog, BlogPost, Dashboard, NotFound };
