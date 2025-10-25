@@ -4,7 +4,7 @@
 Built with React and Firebase, it promotes **calisthenics-based workouts** that require minimal equipment — making fitness accessible to anyone, anywhere.
 
 ## 🚀 Live Demo
-👉 [https://codefit.vercel.app](https://codefit.vercel.app)
+👉 [https://codefit-henna.vercel.app](https://codefit-henna.vercel.app/)
 
 ## Features ✨
 
