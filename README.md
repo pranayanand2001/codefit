@@ -3,6 +3,8 @@
 **CodeFit** is a modern fitness web platform designed for people who sit and work for long hours.  
 Built with React and Firebase, it promotes **calisthenics-based workouts** that require minimal equipment — making fitness accessible to anyone, anywhere.
 
+![CodeFitPreview](.src/assets/images/codefitPreview.png)
+
 ## 🚀 Live Demo
 👉 [https://codefit-henna.vercel.app](https://codefit-henna.vercel.app/)
 
