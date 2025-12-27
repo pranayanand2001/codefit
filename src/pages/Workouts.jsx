@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../firebase/config.js";
 import { Link } from "react-router-dom";
 
 const Workouts = () => {
@@ -29,6 +29,8 @@ const Workouts = () => {
     if (loading) {
         return <p className="text-white p-8">Loading workouts...</p>;
     }   
+    console.log(workouts);
+    
     
     return (
         <div className="min-h-screen bg-black text-white p-8">
@@ -40,8 +42,8 @@ const Workouts = () => {
                     to={`/workouts/${workout.id}`}
                     className="bg-neutral-900 p-6 rounded-xl hover:bg-neutral-800 transition"
                 >
-                <h2 className="text-2xl font-semibold mb-2">{workout.title}</h2>
-                <p className="text-gray-400 text-sm mb-3">{workout.description}</p>
+                <h2 className="text-2xl font-semibold mb-2">{workout.exercises.name}</h2>
+                <p className="text-gray-400 text-sm mb-3">{workout.exercises.gif}</p>
 
                 <div className="flex justify-between text-sm text-gray-300">
                     <span>{workout.level}</span>

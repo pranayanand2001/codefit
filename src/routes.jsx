@@ -4,7 +4,6 @@ import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from '
 import MainLayout from './layouts/MainLayout.jsx'
 import {Home, Blog, BlogPost, NotFound} from './pages/export.js'
 import CreateBlog from './pages/admin/CreateBlog.jsx'
-import About from './sections/About.jsx'
 import Workouts from './pages/Workouts.jsx'
 
 
