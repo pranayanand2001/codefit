@@ -2,19 +2,12 @@
 
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
-import AuthLayout from './layouts/AuthLayout.jsx'
-import {Home, Login, Signup, Blog, BlogPost, Dashboard, NotFound} from './pages/export.js'
+import {Home, Blog, BlogPost, NotFound} from './pages/export.js'
 import CreateBlog from './pages/admin/CreateBlog.jsx'
-import { useAuth } from './contexts/AuthContext.jsx'
+import About from './sections/About.jsx'
+import Workouts from './pages/Workouts.jsx'
 
-//Protected Route Component
-function ProtectedRoute({ children }) {
-  const {user} = useAuth();
-  if(!user){
-    return <Navigate to="/login" />;
-  }
-  return children
-}
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,18 +17,8 @@ const router = createBrowserRouter(
         <Route path="blog" element={<Blog />} />  
         <Route path='blog/:id' element={<BlogPost />} />
         <Route path='admin/CreateBlog' element={<CreateBlog />} />
+        <Route path='/workouts' element={<Workouts />} />
       </Route>
-      <Route element={<AuthLayout />}>
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-      </Route>
-      <Route element={<MainLayout />}>
-        <Route path="dashboard" element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } />
-      </Route>  
       
       <Route path="*" element={<NotFound />} />
     </Route>

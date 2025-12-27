@@ -3,11 +3,8 @@ import { Link } from 'react-router-dom'
 import CodeFitLogo from '../assets/icons/CodeFitLogo'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { useAuth } from '../hooks/useAuth'
-import Button from './Button'
 
 function Navbar() {
-  const { user, logout } = useAuth()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
@@ -57,31 +54,7 @@ function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff3b3b] group-hover:w-full transition-all duration-300"></span>
               </a>
             </li>
-            {!user && (
-              <>
-                <li>
-                  <Link 
-                    to="/login" 
-                    className="text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium relative group"
-                  >
-                    Sign in
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff3b3b] group-hover:w-full transition-all duration-300"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/signup">
-                    <Button size="sm" className="ml-2">Create account</Button>
-                  </Link>
-                </li>
-              </>
-            )}
-            {user && (
-              <li>
-                <Button size="sm" variant="secondary" onClick={logout}>Sign out</Button>
-              </li>
-            )}
-          </ul>
-
+            </ul>
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300"
@@ -117,58 +90,23 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-              <Link 
-                  to="/about" 
+              <a 
+                  href="#about" 
                   className="block text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link 
-                  to="/services"
+                <a 
+                  href="#services"
                   className="block text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
-                </Link>
+                </a>
               </li>
-              {!user && (
-                <>
-                  <li>
-                    <Link 
-                      to="/login" 
-                      className="block text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Sign in
-                    </Link>
-                  </li>
-                  <li>
-                    <Link 
-                      to="/register" 
-                      className="block text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Create account
-                    </Link>
-                  </li>
-                </>
-              )}
-              {user && (
-                <li>
-                  <button 
-                    className="block w-full text-left text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
-                    onClick={() => {
-                      logout()
-                      setIsMenuOpen(false)
-                    }}
-                  >
-                    Sign out
-                  </button>
-                </li>
-              )}
             </ul>
           </motion.div>
         )}
