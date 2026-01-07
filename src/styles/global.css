@@ -178,6 +178,16 @@ body {
   background: var(--color-accent-primary);
 }
 
+/* Hide Scrollbar Utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
 /* Focus Styles */
 .focus-ring {
   outline: 2px solid transparent;

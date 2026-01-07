@@ -4,9 +4,11 @@ import Card from '../components/Card'
 import BackgroundPattern from '../components/BackgroundPattern'
 import { DEFAULT_PLANS } from '../utils/constants'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 function Services() {
   const plans = Object.values(DEFAULT_PLANS)
+  const navigate = useNavigate()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -104,7 +106,9 @@ function Services() {
                 </div>
                 
                 <div className="mt-8 pt-6 border-t border-[#818cf8]/20">
-                  <button className="w-full py-3 px-6 bg-gradient-to-r from-[#ff3b3b] to-[#818cf8] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#ff3b3b]/25 transition-all duration-300 transform hover:scale-105">
+                  <button onClick={() => {
+                    navigate(`/services/${plan.name.toLowerCase().replace(' ', '-')}`)
+                  }} className="w-full py-3 px-6 bg-gradient-to-r from-[#ff3b3b] to-[#818cf8] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#ff3b3b]/25 transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
                 </div>

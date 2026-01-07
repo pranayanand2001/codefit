@@ -5,6 +5,7 @@ import MainLayout from './layouts/MainLayout.jsx'
 import {Home, Blog, BlogPost, NotFound} from './pages/export.js'
 import CreateBlog from './pages/admin/CreateBlog.jsx'
 import Workouts from './pages/Workouts.jsx'
+import BeginnerPlan from './pages/BeginnerPlan.jsx'
 
 
 
@@ -16,7 +17,7 @@ const router = createBrowserRouter(
         <Route path="blog" element={<Blog />} />  
         <Route path='blog/:id' element={<BlogPost />} />
         <Route path='admin/CreateBlog' element={<CreateBlog />} />
-        <Route path='/workouts' element={<Workouts />} />
+        <Route path='/services/beginner-plan' element={<BeginnerPlan />} />
       </Route>
       
       <Route path="*" element={<NotFound />} />

@@ -43,7 +43,7 @@ const Workouts = () => {
                     className="bg-neutral-900 p-6 rounded-xl hover:bg-neutral-800 transition"
                 >
                 <h2 className="text-2xl font-semibold mb-2">{workout.exercises.name}</h2>
-                <p className="text-gray-400 text-sm mb-3">{workout.exercises.gif}</p>
+                <img src={workout.exercises.gif} alt={workout.exercises.name} className="w-full max-w-sm rounded-lg" loading="lazy"/>
 
                 <div className="flex justify-between text-sm text-gray-300">
                     <span>{workout.level}</span>
