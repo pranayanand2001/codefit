@@ -6,6 +6,8 @@ import {Home, Blog, BlogPost, NotFound} from './pages/export.js'
 import CreateBlog from './pages/admin/CreateBlog.jsx'
 import Workouts from './pages/Workouts.jsx'
 import BeginnerPlan from './pages/BeginnerPlan.jsx'
+import IntermediatePlan from './pages/IntermediatePlan.jsx'
+import AdvancedPlan from './pages/AdvancedPlan.jsx'
 
 
 
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
         <Route path='blog/:id' element={<BlogPost />} />
         <Route path='admin/CreateBlog' element={<CreateBlog />} />
         <Route path='/services/beginner-plan' element={<BeginnerPlan />} />
+        <Route path='/services/intermediate-plan' element={<IntermediatePlan />} />
+        <Route path='/services/advanced-plan' element={<AdvancedPlan />} />
       </Route>
       
       <Route path="*" element={<NotFound />} />
