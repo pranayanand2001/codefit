@@ -3,6 +3,7 @@
 import Button from '../components/Button'
 import BackgroundPattern from '../components/BackgroundPattern'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -49,10 +50,10 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button as="a" href="#services" size="lg" variant="primary">
+            <Button as={Link} to="/#services" size="lg" variant="primary">
               Explore Plans
             </Button>
-            <Button as="a" href="#about" variant="outline" size="lg">
+            <Button as={Link} to="/#about" variant="outline" size="lg">
               Learn More
             </Button>
           </motion.div>

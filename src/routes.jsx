@@ -1,6 +1,6 @@
 // Centralized routing configuration for the CodeFit app
 
-import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Navigate, Route, Router } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
 import {Home, Blog, BlogPost, NotFound} from './pages/export.js'
 import CreateBlog from './pages/admin/CreateBlog.jsx'
@@ -22,6 +22,10 @@ const router = createBrowserRouter(
         <Route path='/services/beginner-plan' element={<BeginnerPlan />} />
         <Route path='/services/intermediate-plan' element={<IntermediatePlan />} />
         <Route path='/services/advanced-plan' element={<AdvancedPlan />} />
+      </Route>
+
+      <Route>
+        
       </Route>
       
       <Route path="*" element={<NotFound />} />

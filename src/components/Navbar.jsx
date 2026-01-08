@@ -37,22 +37,22 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <a 
-                href="#services"
+              <Link 
+                to="/#services"
                 className="text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium relative group"
               >
                 Services
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff3b3b] group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#about"
+              <Link 
+                to="/#about"
                 className="text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium relative group"
               >
                 About
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff3b3b] group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             </li>
             </ul>
           {/* Mobile Menu Button */}
@@ -90,22 +90,22 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-              <a 
-                  href="#about" 
+                <Link 
+                  to="/#about" 
                   className="block text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services"
+                <Link 
+                  to="/#services"
                   className="block text-[#f8f9fa] hover:text-[#ff3b3b] transition-colors duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>

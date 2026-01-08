@@ -3,8 +3,11 @@
 import { Outlet } from 'react-router-dom'
 import { Navbar } from '../components/export'
 import Footer from '../components/Footer'
+import useHashScroll from '../hooks/useHashScroll'
 
 function MainLayout() {
+  useHashScroll()
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
